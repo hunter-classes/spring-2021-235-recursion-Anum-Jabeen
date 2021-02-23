@@ -40,8 +40,6 @@ void tour(int board[5][5], int row, int col, int position, bool &complete){
 	board[row][col]=position;
 	position+=1;
 
-	printBoard(board);
-	
     	if(!complete){
 	   tour(board, row+1,col+2,position,complete);
 	}if(!complete){
@@ -59,6 +57,7 @@ void tour(int board[5][5], int row, int col, int position, bool &complete){
 	}if(!complete){
 	   tour(board,row-2,col-1,position,complete);
 	}if(!complete){
+	  board[row][col]=0;
           return;
     	}
 }

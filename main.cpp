@@ -7,6 +7,6 @@ int main(){
 
     bool complete = false;
     tour(board, 0, 0, 1, complete);
-
+    printBoard(board);
     return 0;
 }
